@@ -28,7 +28,7 @@ public class P4 {
 
         int check = nums[0];
         int check2 = nums[0];
-
+	int perraka = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < check) {
                 check = nums[i];
