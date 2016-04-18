@@ -18,23 +18,27 @@ public class P4 {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int[] nums = new int[5];
-        
+        int[] nums = new int[10];
+
         for (int i = 0; i < nums.length; i++) {
             System.out.println("Introduce un valor");
             System.out.print("> ");
             nums[i] = input.nextInt();
         }
-        
+
         int check = nums[0];
+        int check2 = nums[0];
+
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < check) {
                 check = nums[i];
-            } else {
-                System.out.println("Siguiente valor\n");
+            }
+            if (nums[i] > check2) {
+                check2 = nums[i];
             }
         }
-        System.out.println("value of check: "+check);
+        System.out.print("Valor mas pequeno: " + check + "\n");
+        System.out.print("Valor mas grande: " + check2);
 
     }
 }
